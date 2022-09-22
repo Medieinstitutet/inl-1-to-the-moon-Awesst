@@ -1,0 +1,526 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+/* ---------------------------------------------------------------*/
+/* ----------------------------NAV--------------------------------*/
+/* ---------------------------------------------------------------*/
+#menu-button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 40px;
+  z-index: 3;
+}
+button span {
+  width: 35px;
+  background-color: black;
+  display: block;
+  height: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  position: relative;
+  right: 0;
+  transition: all 0.3 ease-in-out;
+}
+button:hover span:nth-child(2) {
+  background-color: white;
+  left: 1px;
+}
+button .moving-menu {
+  right: 5px;
+}
+button + .menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+button.menu-open + .menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.menu {
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  background-color: rgba(243, 243, 243, 0.7);
+  z-index: 2;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.menu ul {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.menu a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #d200d2;
+  transition: 0.7s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .menu a {
+    font-size: 45px;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  .box-arrow:hover {
+    right: 1px;
+    transition: 0.3 ease-in-out;
+  }
+}
+
+/* ---------------------------------------------------------------*/
+/* ----------------------------NAV END----------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/* ----------------------------Home Section-----------------------*/
+/* ---------------------------------------------------------------*/
+.homepage {
+  min-height: 100vh;
+  background-image: url(../img/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+  background-size: cover;
+  background-position: 50% 45%;
+}
+.homepage .heading-box {
+  border: 4px solid black;
+  width: 10rem;
+  position: absolute;
+  padding: 10px;
+  top: 8%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.homepage .heading-box .box-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.main-arrow {
+  position: absolute;
+  font-size: 30px;
+  transform: rotate(90deg) translateX(-50%);
+  left: 50%;
+  bottom: 0%;
+  color: white;
+  text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.main-arrow:hover {
+  transition: 1s ease-in-out;
+  bottom: 10px;
+}
+/* ---------------------------------------------------------------*/
+/* ------------------------Home Section END-----------------------*/
+/* ---------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/* ----------------------------Info Page--------------------------*/
+/* ---------------------------------------------------------------*/
+
+.infopage {
+  min-height: 100vh;
+  background-image: url(../img/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+  background-size: cover;
+  background-position: 30% 50%;
+  color: white;
+  position: relative;
+}
+.info.container {
+  z-index: 1;
+  position: relative;
+}
+.darken {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 8, 8, 0.7);
+  z-index: 0;
+}
+.infopage .space {
+  font-weight: 700;
+  font-size: 2.5rem;
+  left: 40px;
+  top: 59px;
+  margin-bottom: 5rem;
+  position: relative;
+  right: 10px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.infopage .ventures {
+  font-size: 3.5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 70px;
+  top: 70px;
+}
+.infopage .title {
+  font-weight: 500;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.infopage .first {
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 9px;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 20px;
+  letter-spacing: 0.25px;
+}
+.infopage .spacing {
+  margin-top: 5px;
+}
+.infopage .quote {
+  font-weight: 300;
+  font-size: 15px;
+  padding: 45px;
+}
+.quote blockquote::before {
+  content: "“";
+}
+.quote blockquote::after {
+  content: "“";
+}
+.infopage .second {
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 9px;
+  letter-spacing: 0.25px;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+}
+.infopage a {
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 3;
+  color: #d200d2;
+}
+.infopage span {
+  color: #d200d2;
+  padding-left: 10px;
+}
+.infopage .desktop {
+  display: none;
+}
+
+/* --------------------------------------------------------------*/
+/* ------------------------Info Page End-------------------------*/
+/* --------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
+
+/* ----------------------------DESKTOP----------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/* -----------------Home Section DESKTOP Start--------------------*/
+/* ---------------------------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+  .homepage {
+    min-height: 100vh;
+    background-image: url(../img/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 55%;
+  }
+  .homepage .heading-box {
+    border: 4px solid black;
+    width: 22rem;
+    height: 21rem;
+    position: absolute;
+    padding: 10px;
+    top: 15%;
+    left: 15%;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .homepage .heading-box .box-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+  .box-story {
+    position: absolute;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    bottom: 20px;
+    right: 35px;
+  }
+  .box-story span {
+    position: relative;
+    left: 0;
+    transition: 1s ease-in-out;
+  }
+  .box-story:hover span {
+    left: 15px;
+  }
+
+  .main-arrow {
+    position: absolute;
+    font-size: 55px;
+    transform: rotate(90deg) translateX(-50%);
+    bottom: -30px;
+    left: 50%;
+    color: white;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  .main-arrow:hover {
+    transition: 1s ease-in-out;
+    bottom: 10px;
+  }
+  .fam {
+    display: none;
+  }
+  /* ---------------------------------------------------------------*/
+  /* ------------------Home Section DESKTOP END---------------------*/
+  /* ---------------------------------------------------------------*/
+
+  /* ---------------------------------------------------------------*/
+  /* -------------------Info Page DESKTOP START---------------------*/
+  /* ---------------------------------------------------------------*/
+  .infopage .desktop {
+    display: block;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .infopage {
+    min-height: 100vh;
+    background-image: url(../img/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+    background-size: cover;
+    background-position: 30% 50%;
+    color: white;
+    position: relative;
+  }
+  .info.container {
+    z-index: 1;
+    display: flex;
+  }
+  .darken {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 8, 8, 0.7);
+    z-index: 0;
+  }
+  .infopage .space {
+    font-weight: 700;
+    font-size: 8rem;
+    left: 100px;
+    top: 60px;
+    position: relative;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .infopage .ventures {
+    font-size: 10rem;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    left: 120px;
+    top: 120px;
+  }
+  .infopage .title {
+    font-weight: 500;
+    justify-content: left;
+    font-size: 2.5rem;
+    text-align: left;
+    position: absolute;
+    top: 350px;
+    left: 70px;
+  }
+  .infopage .first {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    position: absolute;
+    top: 450px;
+    left: 70px;
+  }
+  .infopage .spacing {
+    margin-top: 5px;
+  }
+  .infopage .quote {
+    font-weight: 300;
+    font-size: 33px;
+    position: absolute;
+    top: 700px;
+    left: 70px;
+  }
+  .quote blockquote::before {
+    content: "“";
+  }
+  .quote blockquote::after {
+    content: "“";
+  }
+  .infopage .second {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    position: absolute;
+    top: 450px;
+    left: 1100px;
+  }
+  .infopage a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 3;
+    color: #d200d2;
+  }
+  .infopage img {
+    width: 21%;
+    height: 21%;
+    position: relative;
+    left: 1220px;
+    top: 240px;
+    margin-top: 10px;
+    transform: rotate(3deg);
+  }
+  .infopage .desktop .quote2 {
+    font-weight: 300;
+    font-size: 45px;
+    position: relative;
+    left: 730px;
+    top: 120px;
+    background-image: linear-gradient(#d200d2, white, #d200d2);
+    background-clip: text;
+    color: transparent;
+    word-spacing: 3px;
+    font-style: italic;
+    opacity: 0.5;
+  }
+  .link span {
+    position: relative;
+    left: 0;
+    transition: 1s ease-in-out;
+  }
+  .link:hover span {
+    left: 15px;
+  }
+}
+/* ---------------------------------------------------------------*/
+/* -------------------Info Page DESKTOP END-----------------------*/
+/* ---------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------*/
+/* ----------------------Cookies Start----------------------------*/
+/* ---------------------------------------------------------------*/
+#wrapper {
+  position: fixed;
+  background: rgb(0, 0, 44);
+  bottom: 0px;
+  color: white;
+  color: #880e4b;
+  z-index: 4;
+  width: 100%;
+}
+.cookies {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  min-height: 70px;
+  text-shadow: 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+    0 0 70px #e60073;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+#accept {
+  cursor: pointer;
+  margin-right: 25px;
+  border: solid 7px;
+  border-color: blue;
+  background-color: blue;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+    0 0 70px #e60073;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.cookies p {
+  margin-left: 30px;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 40px #e60073, 0 0 50px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 40px #ff4da6, 0 0 50px #ff4da6;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #wrapper {
+    position: fixed;
+    background: rgb(0, 0, 44);
+    bottom: 0px;
+    color: white;
+    color: #880e4b;
+    z-index: 4;
+    width: 100%;
+  }
+  .cookies {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    min-height: 70px;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 7px;
+  }
+  #accept {
+    cursor: pointer;
+    margin-right: 25px;
+    border: solid 7px;
+    border-color: blue;
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  .cookies p {
+    margin-left: 30px;
+  }
+}
+
+/* ---------------------------------------------------------------*/
+/* -------------------------Cookies End---------------------------*/
+/* ---------------------------------------------------------------*/

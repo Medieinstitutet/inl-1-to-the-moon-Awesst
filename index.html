@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To The Moon</title>
+    <link rel="stylesheet" href="/CSS/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+    <link rel="icon" href="/img/moon.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!----Body Start---->
+  <body>
+    <!-------Nav Section star---->
+    <div class="navbar">
+      <button id="menu-button">
+        <span></span>
+        <span class="moving-menu"></span>
+        <span></span>
+      </button>
+      <div class="menu">
+        <ul>
+          <li>
+            <a class="underline1" href="#">Our Story</a>
+          </li>
+          <li>
+            <a class="underline2" href="#">Space<br />Ventures</a>
+          </li>
+          <li>
+            <a class="underline3" href="#">About<br />Major Tom</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!---Nav Section End---->
+
+    <!----Home Section Start---->
+    <section class="homepage">
+      <div class="heading-box">
+        <div class="box-text">To The Moon</div>
+        <a class="box-story" href="#"
+          >Read our story <span class="arrow">➜</span></a
+        >
+      </div>
+      <div class="main-arrow">➜</div>
+    </section>
+    <!----Home Section End---->
+
+    <!--Info Section-->
+    <section class="infopage">
+      <div class="darken"></div>
+      <div class="info container">
+        <div class="ventures text">Ventures</div>
+        <div class="space text">Space</div>
+        <div class="title text">Ground Control to Major Tom</div>
+        <div class="first text">
+          <p>
+            Ground Control to Major Tom. Take your protein pills and put your
+            helmet<br />
+            on. Ground Control to Major Tom (ten, nine, eight, seven, six).<br />
+            Commencing countdown, engines on (five, four, three). Check
+            ignition<br />
+            and may God's love be with you (two, one, liftoff). This is Ground
+            Control<br />
+            to Major Tom.
+          </p>
+          <p class="spacing text">
+            You've really made the grade. And the papers want to know whose
+            shirts<br />
+            you wear. Now it's time to leave the capsule if you dare. This is
+            Major Tom<br />
+            to Ground Control. I'm stepping through the door.
+          </p>
+        </div>
+        <div class="quote">
+          <blockquote>
+            <em
+              >And I'm floating in a most peculiar way.<br />
+              And the stars look very different today.<br />
+              For here.</em
+            >
+          </blockquote>
+        </div>
+        <div class="second text">
+          <p>
+            Am I sitting in a tin can. Far above the world. Planet Earth is
+            blue. And<br />
+            there's nothing I can do. Though I'm past one hundred thousand
+            miles.<br />
+            I'm feeling very still. And I think my spaceship.<br />
+            knows which way to go. Tell my wife I love her<br />
+            very much she knows.
+          </p>
+          <p class="spacing text">
+            Ground Control to Major Tom. Your circuit's dead, there's<br />
+            something wrong. Can you hear me, Major Tom? Can<br />
+            you hear me, Major Tom? Can you hear me, Major Tom?<br />
+            Can you "Here am I floating 'round my tin can.<br class="fam" />
+            Far above the moon.<br />Planet Earth is blue.<br />And there's
+            nothing i can do.
+          </p>
+          <div class="link">
+            <a href="#">Read more about Major Tom</a
+            ><span class="arrow">➜</span>
+          </div>
+        </div>
+        <div class="desktop">
+          <div class="quote2 desktop">
+            <blockquote>
+              <em>
+                Persistence is very<br />important. You<br />
+                should not give up<br />
+                unless you are<br />
+                forced to give up.</em
+              >
+            </blockquote>
+          </div>
+          <div class="img desktop"><img src="/img/major_tom.jpg" /></div>
+        </div>
+      </div>
+    </section>
+    <!--End Info Section-->
+    <script>
+      const menuBtn = document.querySelector("#menu-button");
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("menu-open");
+      });
+    </script>
+    <!------Cookies Starts------->
+    <div id="wrapper">
+      <div class="cookies">
+        <p>
+          I don't know where I'm going from here, but I promiste it won't be
+          boring. You should accept cookies.
+        </p>
+        <button id="accept">Accept</button>
+      </div>
+    </div>
+    <script>
+      document.querySelector("#accept").addEventListener("click", () => {
+        document.querySelector("#wrapper").style.display = "none";
+        setCookie("cookie", true, 30);
+      });
+    </script>
+    <!-------Cookies END--------->
+  </body>
+  <!----Body End---->
+</html>
