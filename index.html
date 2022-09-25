@@ -5,20 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To The Moon</title>
-    <link rel="stylesheet" href="/CSS/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="/css/main.css" type="text/css" />
-    <link rel="icon" href="/img/moon.jpg" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="icon" href="img/moon.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;1,300&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,7 +20,7 @@
   <!----Body Start---->
   <body>
     <!-------Nav Section star---->
-    <div class="navbar">
+    <nav class="navbar">
       <button id="menu-button">
         <span></span>
         <span class="moving-menu"></span>
@@ -45,7 +39,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
     <!---Nav Section End---->
 
     <!----Home Section Start---->
@@ -134,12 +128,7 @@
       </div>
     </section>
     <!--End Info Section-->
-    <script>
-      const menuBtn = document.querySelector("#menu-button");
-      menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("menu-open");
-      });
-    </script>
+
     <!------Cookies Starts------->
     <div id="wrapper">
       <div class="cookies">
@@ -150,13 +139,17 @@
         <button id="accept">Accept</button>
       </div>
     </div>
+    <!-------Cookies END--------->
     <script>
       document.querySelector("#accept").addEventListener("click", () => {
         document.querySelector("#wrapper").style.display = "none";
         setCookie("cookie", true, 30);
       });
+      const menuBtn = document.querySelector("#menu-button");
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("menu-open");
+      });
     </script>
-    <!-------Cookies END--------->
   </body>
   <!----Body End---->
 </html>

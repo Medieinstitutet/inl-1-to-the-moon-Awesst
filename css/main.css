@@ -109,7 +109,7 @@ button.menu-open + .menu {
   width: 10rem;
   position: absolute;
   padding: 10px;
-  top: 8%;
+  top: 7%;
   left: 10%;
   background-color: rgba(255, 255, 255, 0.7);
 }
@@ -119,6 +119,23 @@ button.menu-open + .menu {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+}
+.box-story {
+  font-weight: 300;
+  position: absolute;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+  bottom: 7px;
+  left: 8px;
+}
+.box-story span {
+  position: relative;
+  left: 0;
+  transition: 1s ease-in-out;
+}
+.box-story:hover span {
+  left: 15px;
 }
 .main-arrow {
   position: absolute;
@@ -269,12 +286,13 @@ button.menu-open + .menu {
     margin-top: 40px;
   }
   .box-story {
+    font-weight: 300;
     position: absolute;
     font-size: 18px;
     text-decoration: none;
     color: black;
-    bottom: 20px;
-    right: 35px;
+    bottom: 15px;
+    left: 175px;
   }
   .box-story span {
     position: relative;
