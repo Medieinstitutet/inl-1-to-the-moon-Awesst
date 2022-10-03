@@ -123,7 +123,7 @@ button.menu-open + .menu {
 .box-story {
   font-weight: 300;
   position: absolute;
-  font-size: 13px;
+  font-size: 0.8rem;
   text-decoration: none;
   color: black;
   bottom: 7px;
@@ -520,7 +520,7 @@ button.menu-open + .menu {
     align-items: center;
     min-height: 70px;
     animation: glow 1s ease-in-out infinite alternate;
-    font-size: 7px;
+    font-size: 0.5rem;
   }
   #accept {
     cursor: pointer;
