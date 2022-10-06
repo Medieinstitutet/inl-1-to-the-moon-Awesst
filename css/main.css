@@ -30,7 +30,7 @@ button span {
   border-radius: 4px;
   position: relative;
   right: 0;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 button:hover span:nth-child(2) {
   background-color: white;
@@ -87,7 +87,7 @@ button.menu-open + .menu {
   }
   .box-arrow:hover {
     right: 1px;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
   }
 }
 
@@ -435,9 +435,10 @@ button.menu-open + .menu {
     left: 730px;
     top: 120px;
     background-image: linear-gradient(#d200d2, white, #d200d2);
-    background-clip: text;
     color: transparent;
+    background-clip: text;
     word-spacing: 3px;
+    -webkit-background-clip: text;
     font-style: italic;
     opacity: 0.5;
   }
@@ -526,7 +527,6 @@ button.menu-open + .menu {
     cursor: pointer;
     margin-right: 25px;
     border: solid 7px;
-    border-color: blue;
     background-color: blue;
     color: white;
     font-weight: 700;
